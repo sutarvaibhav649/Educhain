@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class SkillRequest {
     private String name;
-    private String type; // TEACH or LEARN
+    private String type;
     private Long userId;
 
 }

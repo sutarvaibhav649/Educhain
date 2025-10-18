@@ -40,5 +40,26 @@ public class SkillService {
     public void deleteSkill(Long id) {
         skillRepository.deleteById(id);
     }
+
+
+    public Skill updateSkill(Long id, SkillRequest req) {
+        Skill skill = skillRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Skill not found"));
+
+        skill.setName(req.getName());
+        skill.setType(req.getType());
+        return skillRepository.save(skill);
+    }
+
+
+    public List<Skill> searchSkills(String name, String type) {
+        if (name != null && !name.isEmpty()) {
+            return skillRepository.findByNameContainingIgnoreCase(name);
+        } else if (type != null && !type.isEmpty()) {
+            return skillRepository.findByType(type);
+        } else {
+            return skillRepository.findAll();
+        }
+    }
 }
 

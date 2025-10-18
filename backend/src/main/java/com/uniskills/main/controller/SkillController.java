@@ -37,5 +37,17 @@ public class SkillController {
     public void deleteSkill(@PathVariable Long id) {
         skillService.deleteSkill(id);
     }
+    @PutMapping("/{id}")
+    public Skill updateSkill(@PathVariable Long id, @RequestBody SkillRequest request) {
+        return skillService.updateSkill(id, request);
+    }
+
+
+    @GetMapping("/search")
+    public List<Skill> searchSkills(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String type) {
+        return skillService.searchSkills(name, type);
+    }
 }
 
