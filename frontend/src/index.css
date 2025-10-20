@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+:root {
+  /* 🎓 EduChain Primary Colors */
+  --primary-blue: #2F80ED;
+  --accent-blue: #1D4ED8;
+
+  /* 🌿 Secondary Colors */
+  --mint-green: #10B981;
+  --soft-yellow: #FACC15;
+
+  /* ⚪ Neutral Colors */
+  --bg-light: #F9FAFB;
+  --white: #FFFFFF;
+  --text-dark: #374151;
+  --text-muted: #6B7280;
+
+  /* 🚀 Action & Feedback */
+  --cta-blue: #2563EB;
+  --error-red: #DC2626;
+  --success-green: #16A34A;
+
+  /* 🌙 Footer & Headings */
+  --footer-bg: #111827;
+  --heading-dark: #1E293B;
+}
+
+
+body{
+    height: 100vh;
+    background-color:#273b46;
+    color: #FFFFFF;
+}

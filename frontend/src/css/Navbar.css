@@ -1,0 +1,73 @@
+nav {
+    height: 80px;
+    background: #283E4A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    box-shadow: 0 2px 0px rgba(33, 50, 59, 0.8);
+}
+
+nav span {
+    color: #FE38B5;
+}
+
+nav .left {
+    margin-left: 50px;
+}
+
+nav .right {
+    margin-right: 50px;
+}
+
+nav .right button {
+    background:transparent;
+    height: 40px;
+    width: 120px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+nav .right button:hover{
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    background: linear-gradient(90deg,rgba(39, 12, 240, 1) 0%, rgba(55, 55, 191, 1) 36%, rgba(71, 212, 237, 1) 100%);  
+}
+
+nav .middle ul {
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav .middle ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+nav .middle ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FE38B5;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+nav .middle ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav .middle ul li:not(:hover)::after {
+    transform-origin: right;
+}
