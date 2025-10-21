@@ -4,9 +4,12 @@ import App from "./App";
 import "./index.css";
 import "./css/Navbar.css";
 import "./css/HomePage.css";
+import "./css/Footer.css";
+import "./css/SignUp.css";
+import "./css/Login.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <App/>
   </BrowserRouter>
 );

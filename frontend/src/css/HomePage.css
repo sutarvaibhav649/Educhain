@@ -338,4 +338,21 @@ h4{
     }
 }
 
+.join button{
+    background:transparent;
+    height: 40px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+}
+
+.join button:hover{
+    cursor: pointer;
+    border:2px solid #FE38B5;
+    transition: 0.3s ease-in-out;
+    box-shadow: 1px 1px 1px #FE38B5 ;
+}
+
 

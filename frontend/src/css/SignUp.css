@@ -1,0 +1,188 @@
+
+.form-container{
+    width: 950px;
+    height: 500px;
+    border: 2px solid gray;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 8%;
+}
+
+.form-container .right-form{
+    width: 150%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-container .left-form{
+    /* background-color: #f647b0df; */
+    background: linear-gradient(135deg, #e04397, #ff6bb5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 1px 1px 1px #f647b0df;
+}
+
+.form-container .left-form h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container .left-form  p{
+    color: white;
+    margin:0;
+    padding: 0;
+}
+
+.form-container .left-form button{
+    height: 40px;
+    width: 170px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.form-container .left-form button:hover{
+    cursor: pointer;
+    border: 2px solid #27214c;
+    transform: translateY(-1px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 1px 1px 1px #ec3eac;
+}
+
+
+.header{
+    color: #FE38B5;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #FE38B5 ;
+}
+
+.header h3{
+    margin-bottom: 20px;
+}
+
+
+.header .logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.header .google, .linkedIn, .instagram{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #fe38b5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.header .google:hover, .linkedIn:hover, .instagram:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px #fe38b5;
+}
+
+.header img{
+    height: 25px;
+    width: 25px;
+}
+
+.form-container p{
+    font-size: 14px;
+    color: gray;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.form-container form{
+    background: transparent;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form input{
+    height: 40px;
+    background: transparent;
+    margin-bottom: 20px;
+     border-bottom: 2px solid #FE38B5;
+     padding: 5px;
+}
+
+.form-container form input::placeholder{
+    text-transform: uppercase;
+}
+
+.form-container form input:focus::placeholder{
+    animation: placeholder-animation 0.3s ease-in-out;
+}
+
+.form-container form .name #firstName{
+    margin-right: 10px;
+}
+
+.form-container form .name #lastName{
+    margin-left: 10px;
+}
+
+.form-container form input:focus{
+    outline: none;
+}
+
+@keyframes placeholder-animation{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form button{
+    height: 40px;
+    width: 170px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+
+}
+
+.form-container form button:hover{
+      cursor: pointer;
+  border: 2px solid #fe38b5;
+  box-shadow: 0 0 10px #fe38b5;
+  transform: translateY(-3px);
+} 

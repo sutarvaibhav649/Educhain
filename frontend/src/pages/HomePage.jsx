@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-
+import Footer from "../components/Footer";
 const HomePage=()=>{
        return(
               <>
@@ -79,6 +79,11 @@ const HomePage=()=>{
                                           <li>Learn and Feedback</li>
 
                                    </ul>
+                                   <div className="join">
+                                          <button>
+                                                 <a href="#">Get Started</a>
+                                          </button>
+                                   </div>
                             </div>
                            <div className="right-side">
                                    <div className="circle-container">
@@ -98,9 +103,9 @@ const HomePage=()=>{
                                           <p>Innovation</p>
                                    </div>
                                    </div>
-
                             </div>
                      </section>
+                     <Footer/>
               </>
        );
 }
