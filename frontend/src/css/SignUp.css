@@ -186,3 +186,12 @@
   box-shadow: 0 0 10px #fe38b5;
   transform: translateY(-3px);
 } 
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: block;
+}

@@ -1,0 +1,105 @@
+.skill-form-container {
+  width: 800px;
+  display: flex;
+  margin: 50px auto;
+  border: 2px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.skill-form-container .left-form {
+  width: 35%;
+  background: linear-gradient(135deg, #e04397, #ff6bb5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.skill-form-container .left-form h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.skill-form-container .left-form p {
+  font-size: 14px;
+}
+
+.skill-form-container .right-form {
+  width: 65%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-form-container .right-form form{
+
+    width: 100%;
+}
+
+.skill-form-container .header h3 {
+  color: #FE38B5;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.skill-form-container input,
+.skill-form-container select {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #FE38B5;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.skill-form-container input::placeholder {
+  text-transform: uppercase;
+  color: gray;
+}
+
+.skill-form-container select {
+  color: white;
+}
+
+.skill-form-container input:focus,
+.skill-form-container select:focus {
+  outline: none;
+  border-bottom: 2px solid #ff6bb5;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn button {
+  height: 40px;
+  width: 150px;
+  border: 2px solid #FE38B5;
+  border-radius: 10px;
+  background: transparent;
+  color: #FE38B5;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+
+.btn button:hover {
+  cursor: pointer;
+  background: #FE38B5;
+  color: white;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}

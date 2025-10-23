@@ -1,0 +1,103 @@
+.profile-container {
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  gap: 30px;
+  background-color: #30444e;
+  border: 2px solid #51585c;
+  border-radius: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #273b46;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  color: #fe38b5;
+  margin: 0;
+}
+
+.profile-info p {
+  color: white;
+  margin: 5px 0;
+}
+
+.profile-info .btns {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.profile-info .btns button {
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: 2px solid #fe38b5;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.profile-info .btns button:hover {
+  background: #fe38b5;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Sections (Skills & Courses) */
+.section {
+  background-color: #30444e;
+  border: 2px solid #51585c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.section h3 {
+  color: #fe38b5;
+  margin-bottom: 15px;
+}
+
+.skills span,
+.courses span {
+  display: inline-block;
+  background: #273b46;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* Hover effect for skills and courses */
+.skills span:hover,
+.courses span:hover {
+  background: #fe38b5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}

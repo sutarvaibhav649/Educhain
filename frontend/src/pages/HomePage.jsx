@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useScrollAnimation } from "../hooks/useScrollAnimation.jsx";
 const HomePage=()=>{
+       useScrollAnimation("scroll-animation");
        return(
               <>
                      <Navbar/>
@@ -87,22 +89,26 @@ const HomePage=()=>{
                             </div>
                            <div className="right-side">
                                    <div className="circle-container">
-                                          <div className="circle1"></div>
-                                          <p>Skill Sharing</p>
+                                   <div className="circle">1</div>
+                                   <div className="arrow"></div>
+                                   <p>Register Yourself</p>
                                    </div>
                                    <div className="circle-container">
-                                          <div className="circle2"></div>
-                                          <p>Peer Learning</p>
+                                   <div className="circle">2</div>
+                                   <div className="arrow"></div>
+                                   <p>Browse and Search</p>
                                    </div>
                                    <div className="circle-container">
-                                          <div className="circle3"></div>
-                                          <p>Collaboration</p>
+                                   <div className="circle">3</div>
+                                   <div className="arrow"></div>
+                                   <p>Connect and Collaborate</p>
                                    </div>
                                    <div className="circle-container">
-                                          <div className="circle4"></div>
-                                          <p>Innovation</p>
+                                   <div className="circle">4</div>
+                                   <p>Learn and Feedback</p>
                                    </div>
-                                   </div>
+                            </div>
+
                             </div>
                      </section>
                      <Footer/>

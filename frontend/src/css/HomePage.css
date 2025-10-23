@@ -355,4 +355,60 @@ h4{
     box-shadow: 1px 1px 1px #FE38B5 ;
 }
 
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Circle icons with arrow flow */
+.right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.circle-container .circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #FE38B5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+}
+
+.circle-container .arrow {
+  width: 50px;
+  height: 2px;
+  background-color: #FE38B5;
+  position: absolute;
+  top: 50%;
+  right: -60px;
+}
+
+.circle-container:last-child .arrow {
+  display: none;
+}
+
+
 
