@@ -1,17 +1,10 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import React from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App";
-import "./index.css";
-import "./css/Navbar.css";
-import "./css/HomePage.css";
-import "./css/Footer.css";
-import "./css/SignUp.css";
-import "./css/Login.css";
-import "./css/ProfilePage.css";
-import "./css/skillsForm.css";
+import "./styles/tailwind.css";
+import "./styles/index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App/>
-  </BrowserRouter>
-);
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(<App />);
