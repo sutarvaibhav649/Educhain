@@ -6,30 +6,46 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
+import java.time.LocalDateTime;
+import java.util.List;
+
 @Entity
 @Table(name = "skills")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Skill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;        // e.g., "Python", "Guitar", "UI Design"
-    private String type;        // "TEACH" or "LEARN"
+    private String title;         // Frontend title
+    private String description;
+    private String category;      // programming, design, business, etc.
+    private int proficiency = 3;  // Default 3
+
+    @ElementCollection
+    private List<String> tags;
+
+    private String type;          // TEACH / LEARN
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Skill() {}
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
-    public Skill(String name, String type, User user) {
-        this.name = name;
-        this.type = type;
-        this.user = user;
+    @PrePersist
+    public void prePersist() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        updatedAt = LocalDateTime.now();
     }
 }
-

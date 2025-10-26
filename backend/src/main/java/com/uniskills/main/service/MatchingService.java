@@ -37,13 +37,13 @@ public class MatchingService {
             // Find others who TEACH that same skill
             List<Skill> teachingSkills = skillRepository.findByType("TEACH");
             for (Skill teachSkill : teachingSkills) {
-                if (teachSkill.getName().equalsIgnoreCase(learnSkill.getName())
+                if (teachSkill.getTitle().equalsIgnoreCase(learnSkill.getTitle())
                         && !teachSkill.getUser().getId().equals(userId)) {
 
                     matches.add(new MatchResponse(
                             teachSkill.getUser().getId(),
                             teachSkill.getUser().getFirstName(),
-                            teachSkill.getName()
+                            teachSkill.getTitle()
                     ));
                 }
             }

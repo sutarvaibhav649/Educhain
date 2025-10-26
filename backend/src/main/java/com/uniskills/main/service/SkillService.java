@@ -1,12 +1,12 @@
 package com.uniskills.main.service;
 
-
 import com.uniskills.main.dto.SkillRequest;
 import com.uniskills.main.model.Skill;
 import com.uniskills.main.model.User;
 import com.uniskills.main.repository.SkillRepository;
 import com.uniskills.main.repository.UserRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -23,7 +23,14 @@ public class SkillService {
     public Skill addSkill(SkillRequest req) {
         User user = userRepository.findById(req.getUserId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
-        Skill skill = new Skill(req.getName(),req.getType(), user);
+        Skill skill = new Skill();
+        skill.setTitle(req.getTitle());
+        skill.setDescription(req.getDescription());
+        skill.setCategory(req.getCategory());
+        skill.setProficiency(req.getProficiency());
+        skill.setTags(req.getTags());
+        skill.setType(req.getType());
+        skill.setUser(user);
         return skillRepository.save(skill);
     }
 
@@ -41,25 +48,27 @@ public class SkillService {
         skillRepository.deleteById(id);
     }
 
-
     public Skill updateSkill(Long id, SkillRequest req) {
         Skill skill = skillRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Skill not found"));
-
-        skill.setName(req.getName());
+        skill.setTitle(req.getTitle());
+        skill.setDescription(req.getDescription());
+        skill.setCategory(req.getCategory());
+        skill.setProficiency(req.getProficiency());
+        skill.setTags(req.getTags());
         skill.setType(req.getType());
         return skillRepository.save(skill);
     }
 
-
-    public List<Skill> searchSkills(String name, String type) {
-        if (name != null && !name.isEmpty()) {
-            return skillRepository.findByNameContainingIgnoreCase(name);
+    public List<Skill> searchSkills(String title, String type, String category) {
+        if (title != null && !title.isEmpty()) {
+            return skillRepository.findByTitleContainingIgnoreCase(title);
         } else if (type != null && !type.isEmpty()) {
             return skillRepository.findByType(type);
+        } else if (category != null && !category.isEmpty()) {
+            return skillRepository.findByCategory(category);
         } else {
             return skillRepository.findAll();
         }
     }
 }
-
